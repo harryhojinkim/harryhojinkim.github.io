@@ -2373,3 +2373,11 @@ body.offcanvas .hojinyeji-nav-toggle {
         background-attachment: scroll !important;
     }
 }
+
+/* Naver map api*/
+
+#map {
+	max-width: none;
+	height: auto;
+	border: 0
+}
