@@ -59,7 +59,7 @@
     };
     // Burger Menu 
     var burgerMenu = function () {
-        $('.js-oliven-nav-toggle').on('click', function (event) {
+        $('.js-hojinyeji-nav-toggle').on('click', function (event) {
             event.preventDefault();
             var $this = $(this);
             if ($('body').hasClass('offcanvas')) {
@@ -75,18 +75,18 @@
     // Click outside of offcanvass
     var mobileMenuOutsideClick = function () {
         $(document).click(function (e) {
-            var container = $("#oliven-aside, .js-oliven-nav-toggle");
+            var container = $("#hojinyeji-aside, .js-hojinyeji-nav-toggle");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
                 if ($('body').hasClass('offcanvas')) {
                     $('body').removeClass('offcanvas');
-                    $('.js-oliven-nav-toggle').removeClass('active');
+                    $('.js-hojinyeji-nav-toggle').removeClass('active');
                 }
             }
         });
         $(window).scroll(function () {
             if ($('body').hasClass('offcanvas')) {
                 $('body').removeClass('offcanvas');
-                $('.js-oliven-nav-toggle').removeClass('active');
+                $('.js-hojinyeji-nav-toggle').removeClass('active');
             }
         });
     };

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/vegas.slider.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=0519363b881bdc7c7b807ce63802cd68"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
@@ -136,6 +137,10 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="section-head col-md-12 text-center"> <span><i class="ti-heart"></i></span>
+                            <h4>Looking forward to see you!</h4>
+                            <h3>2022년 9월 25일</h3>
+                        </div>
                         <div class="col-md-12">
                             <ul>
                                 <li><span id="days"></span>Days</li>
@@ -238,17 +243,7 @@
                     </div>
                 </div>
             </div> -->
-            <!-- See you -->
-            <div id="seeyou" class="seeyou section-padding bg-img bg-fixed" data-background="images/banner-3.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-head col-md-12 text-center"> <span><i class="ti-heart"></i></span>
-                            <h4>Looking forward to see you!</h4>
-                            <h3>2022년 9월 25일</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <!-- Organization -->
             <!-- <div id="organization" class="organization section-padding bg-pink">
                 <div class="container">
@@ -482,6 +477,58 @@
                     </div>
                 </div>
             </div>
+
+            <!-- See you -->
+            <div id="bank" class="seeyou section-padding bg-img bg-fixed">
+                <div class="container">
+                    <div class="row">
+
+                        <p>
+                            <!-- <a class="btn buttono" data-bs-toggle="collapse" href="#collapseHojinBank" role="button" aria-expanded="false" aria-controls="collapseHojinBank">
+                              신랑측 계좌번호
+                            </a> -->
+                            <button class="btn buttono" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHojinBank" aria-expanded="false" aria-controls="collapseHojinBank">
+                              신랑측 계좌번호
+                            </button>
+                        </p>
+                        <div class="collapse" id="collapseHojinBank">
+                            <div class="card card-body">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <p>우리 1002-335-664040 김호진</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <a class="btn buttono" href="https://qr.kakaopay.com/Ej9C6XNww" role="button"><img src="images/kakaopay_icon.png"></a>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            <!-- <a class="btn buttono" data-bs-toggle="collapse" href="#collapseYejiBank" role="button" aria-expanded="false" aria-controls="collapseYejiBank">
+                              신부측 계좌번호
+                            </a> -->
+                            <button class="btn buttono" type="button" data-bs-toggle="collapse" data-bs-target="#collapseYejiBank" aria-expanded="false" aria-controls="collapseYejiBank">
+                              신부측 계좌번호
+                            </button>
+                        </p>
+                        <div class="collapse" id="collapseYejiBank">
+                            <div class="card card-body">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <p>우리 1002-929-479972 이예지</p>
+                                    </div>
+                                    <div class="col-3">
+                                        <a class="btn buttono" href="https://qr.kakaopay.com/Ej884WyH9" role="button"><img src="images/kakaopay_icon.png"></a>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <!-- Confirmation -->
             <div id="rsvp" class="section-padding bg-img bg-fixed" data-background="images/banner-2.jpg">
                 <div class="container">
@@ -527,6 +574,7 @@
                     </div>
                 </div>
             </div>
+                        
             <!-- Footer -->
             <div class="footer2">
                 <div class="hojinyeji-narrow-content">
@@ -556,7 +604,7 @@
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/vegas.slider.min.js"></script>
         <script src="js/main.js"></script>
-        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=h5b4p2n7qx"></script>
+        
         <!-- Vegas Background Slideshow (vegas.slider kenburns) -->
         <script>
             $(document).ready(function() {
@@ -580,36 +628,15 @@
                     animationDuration: 10000
                 });
             });
-            var venue = new naver.maps.LatLng(37.5039018, 127.0047481),
-                map = new naver.maps.Map('map', {
-                    center: venue,
-                    zoom: 15
-                }),
-                marker = new naver.maps.Marker({
-                    map: map,
-                    position: venue
-                });
 
-            var contentString = [
-                '<div class="iw_inner">',
-                '   <h3>JW 메리어트 호텔 서울</h3>',
-                '   <p>서울 서초구 신반포로 176 JW 메리어트 호텔 서울<br />',
-                '       <a href="https://www.marriott.co.kr/hotels/travel/seljw-jw-marriott-hotel-seoul/" target="_blank">홈페이지</a>',
-                '   </p>',
-                '</div>'
-            ].join('');
+            const urlParams = new URLSearchParams(window.location.search);
+            const inviHost = urlParams.get('host');
+            console.log(inviHost)
 
-            var infowindow = new naver.maps.infowindow({
-                content: contentString,
-            })
-            naver.maps.Event.addListener(marker, "click", function(e) {
-                if (infowindow.getMap()) {
-                    infowindow.close();
-                } else {
-                    infowindow.open(map, marker);
-                }
+            var map = new kakao.maps.Map('map', {
+                center: new kakao.maps.LatLng(37.5039018, 127.0047481),
+                level: 3
             });
-            infowindow.open(map, marker)
 
 
         </script>

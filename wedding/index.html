@@ -501,6 +501,10 @@
                     animationDuration: 10000
                 });
             });
+            const urlParams = new URLSearchParams(window.location.search);
+            const inviHost = urlParams.get('host');
+            console.log(inviHost)
+
             var venue = new naver.maps.LatLng(37.5039018, 127.0047481),
                 map = new naver.maps.Map('map', {
                     center: venue,
