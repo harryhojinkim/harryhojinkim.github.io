@@ -62,30 +62,30 @@
         $('.js-hojinyeji-nav-toggle').on('click', function (event) {
             event.preventDefault();
             var $this = $(this);
-            if ($('body').hasClass('offcanvas')) {
+            if ($('body').hasClass('custom_offcanvas')) {
                 $this.removeClass('active');
-                $('body').removeClass('offcanvas');
+                $('body').removeClass('custom_offcanvas');
             }
             else {
                 $this.addClass('active');
-                $('body').addClass('offcanvas');
+                $('body').addClass('custom_offcanvas show');
             }
         });
     };
-    // Click outside of offcanvass
+    // Click outside of custom_offcanvas
     var mobileMenuOutsideClick = function () {
         $(document).click(function (e) {
             var container = $("#hojinyeji-aside, .js-hojinyeji-nav-toggle");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
-                if ($('body').hasClass('offcanvas')) {
-                    $('body').removeClass('offcanvas');
+                if ($('body').hasClass('custom_offcanvas')) {
+                    $('body').removeClass('custom_offcanvas');
                     $('.js-hojinyeji-nav-toggle').removeClass('active');
                 }
             }
         });
         $(window).scroll(function () {
-            if ($('body').hasClass('offcanvas')) {
-                $('body').removeClass('offcanvas');
+            if ($('body').hasClass('custom_offcanvas')) {
+                $('body').removeClass('custom_offcanvas');
                 $('.js-hojinyeji-nav-toggle').removeClass('active');
             }
         });

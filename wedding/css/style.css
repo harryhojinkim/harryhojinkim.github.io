@@ -959,11 +959,11 @@ input[type=radio]:checked:before {
     }
 }
 
-body.offcanvas {
+body.custom_offcanvas {
     overflow-x: hidden;
 }
 
-body.offcanvas #hojinyeji-aside {
+body.custom_offcanvas #hojinyeji-aside {
     -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -974,8 +974,8 @@ body.offcanvas #hojinyeji-aside {
     position: fixed;
 }
 
-body.offcanvas #hojinyeji-main,
-body.offcanvas .hojinyeji-nav-toggle {
+body.custom_offcanvas #hojinyeji-main,
+body.custom_offcanvas .hojinyeji-nav-toggle {
     top: 0;
     -moz-transform: translateX(270px);
     -webkit-transform: translateX(270px);
