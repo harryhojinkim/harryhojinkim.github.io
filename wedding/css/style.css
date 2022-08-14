@@ -986,6 +986,77 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 
 
 /* ======= Header style ======= */
+.header {
+    min-height: 100vh;
+    overflow: hidden;
+}
+.header .caption .o-hidden {
+    display: inline-block;
+}
+.header .caption h5 {
+   font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+.header .caption h1 {
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    font-size: 120px;
+    color: #FFF;
+    display: block;
+    line-height: 1em;
+    position: relative;
+}
+.header .caption p {
+    color: #fff;
+}
+@media screen and (max-width: 991px) {
+    .header {
+        background-position: center center;
+    }
+    .header .caption h1 {
+        font-size: 40px;
+    }
+    .header .caption h5 {
+        font-size: 12px;
+    }
+}
+/* bounce */
+.header .arrow {
+    position: relative;
+    top: 27vh;
+    width: 100%;
+    text-align: center;
+    z-index: 8;
+}
+.header .arrow.bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+.header .arrow i {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+}
+.header .arrow i:hover:after {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+
+/* ======= Header style ======= */
 .hero-section {
     z-index: 1;
     display: -webkit-box;
@@ -1076,6 +1147,162 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
     opacity: 0;
     -webkit-transition: all .5s;
     transition: all .5s;
+}
+
+/* ======= Slider style ======= */
+.hojinyeji-hero {
+    min-height: 550px;
+    width: 100%;
+    float: left;
+    margin-bottom: 0;
+    clear: both;
+}
+.hojinyeji-hero .flexslider {
+    border: none;
+    z-index: 1;
+    margin-bottom: 0;
+}
+.hojinyeji-hero .flexslider .slides {
+    position: relative;
+    overflow: hidden;
+}
+.hojinyeji-hero .flexslider .slides li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+    min-height: 550px;
+}
+
+.hojinyeji-hero .flexslider .flex-control-nav {
+    bottom: 20px;
+    z-index: 1000;
+    right: 20px;
+    float: right;
+    width: auto;
+}
+.hojinyeji-hero .flexslider .flex-control-nav li {
+    display: block;
+    margin-bottom: 6px;
+}
+.hojinyeji-hero .flexslider .flex-control-nav li a {
+    background: transparent;
+    border: 1px solid #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+.hojinyeji-hero .flexslider .flex-control-nav li a.flex-active {
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #fff;
+}
+
+.hojinyeji-hero .flexslider .slider-text {
+    display: table;
+    opacity: 0;
+    min-height: 550px;
+    padding: 0;
+    z-index: 9;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner {
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 700px;
+    padding: 20px;
+    position: relative;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner .desc {
+    bottom: 0px;
+    left: 0;
+    padding: 20px;
+    background: transparent;
+    text-align: center;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner .desc .image-wrap {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner .desc .image-wrap img {
+    border-radius: 100%;
+    border: 8px solid rgba(0, 0, 0, .1);
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner .arrow {
+    position: absolute;
+    bottom: 3vh;
+    width: 97%;
+    text-align: center;
+    z-index: 8;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner .arrow.bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner .arrow i {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner .arrow i:hover:after {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner h6,
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner h6 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner h2,
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner h2,
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner h2 b,
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner h2 b {
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    font-size: 120px;
+    color: #FFF;
+    display: block;
+    line-height: 1em;
+    position: relative;
+    
+}
+.hojinyeji-hero .flexslider .slider-text > .slider-text-inner p {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+    .hojinyeji-hero .flexslider .slider-text > .slider-text-inner {
+        text-align: center;
+        padding: 0;
+    }
+    .hojinyeji-hero .flexslider .slider-text > .slider-text-inner .arrow {
+        width: 89%;
+    }
+    .hojinyeji-hero .flexslider .slider-text > .slider-text-inner h6,
+    .hojinyeji-hero .flexslider .slider-text > .slider-text-inner h6 {
+        font-size: 12px;
+    }
+    .hojinyeji-hero .flexslider .slider-text > .slider-text-inner h2,
+    .hojinyeji-hero .flexslider .slider-text > .slider-text-inner h2 b,
+    .hojinyeji-hero .flexslider .slider-text > .slider-text-inner h2 b {
+    font-size: 40px;
+}
+
 }
 
 /* ===== Title style ===== */

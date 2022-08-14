@@ -24,6 +24,17 @@
     $(window).on('load', function() {
     $('.preloader').fadeOut("slow");
     });
+
+    // Full Height
+    var fullHeight = function () {
+        if (!isMobile.any()) {
+            $('.js-fullheight').css('height', $(window).height());
+            $(window).resize(function () {
+                $('.js-fullheight').css('height', $(window).height());
+            });
+        }
+    };
+
     // Animations
     var contentWayPoint = function () {
         var i = 0;
@@ -90,11 +101,37 @@
             }
         });
     };
+
+    // Slider
+    var sliderMain = function () {
+        $('.hojinyeji-hero .flexslider').flexslider({
+            animation: "fade"
+            , autoplay: true
+            , slideshowSpeed: 5000
+            , controlNav: true
+            , directionNav: false
+            , start: function () {
+                setTimeout(function () {
+                    $('.slider-text').removeClass('animated fadeInUp');
+                    $('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+                }, 500);
+            }
+            , before: function () {
+                setTimeout(function () {
+                    $('.slider-text').removeClass('animated fadeInUp');
+                    $('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+                }, 500);
+            }
+        });
+    };
+
     // Document on load.
     $(function () {
+        fullHeight();
         contentWayPoint();
         burgerMenu();
         mobileMenuOutsideClick();
+        sliderMain();
     });
     // Sections background image from data background
     var pageSection = $(".bg-img, section");

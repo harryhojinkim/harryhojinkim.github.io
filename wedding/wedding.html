@@ -47,11 +47,9 @@
                     <li><a href="wedding.html#home">Home</a></li>
                     <li><a href="wedding.html#couple">Couple</a></li>
                     <li><a href="wedding.html#story">Our Story</a></li>
-                    <!-- <li><a href="wedding.html#organization">Organization</a></li> -->
                     <li><a href="wedding.html#gallery">Gallery</a></li>
                     <li><a href="wedding.html#whenwhere">When & Where</a></li>
-                    <li><a href="wedding.html#rsvp">R.S.V.P</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="wedding.html#rsvp">RSVP</a></li>
                 </ul>
             </nav>
             <!-- Sidebar Footer -->
@@ -65,7 +63,7 @@
         <!-- Content Section -->
         <div id="hojinyeji-main">
             <!-- Header & Slider --> 
-            <aside id="home" class="hero-section">
+            <!-- <aside id="home" class="hero-section">
                 <div class="container hero-inner h-100">
                     <div class="row h-100">
                         <div class="col-md-12 text-center">
@@ -78,7 +76,25 @@
                         </div>
                     </div>
                 </div>
-            </aside>
+            </aside> -->
+            <header id="home" class="header valign bg-img parallaxie" data-background="images/slider.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center caption">
+                            <h1 class="animate-box" data-animate-effect="fadeInUp">Hojin & Yeji</h1>
+                            <h5 class="animate-box" data-animate-effect="fadeInUp">25 September, 2022</h5>
+                            <h5 class="animate-box" data-animate-effect="fadeInUp">Grand Ballroom, JW Marriott Seoul</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="arrow bounce text-center">
+                                <a href="index.html#couple"> <i class="ti-heart"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
             <!-- Couple -->
             <div id="couple" class="bridegroom clear section-padding bg-pink">
                 <div class="container">
@@ -474,9 +490,9 @@
                         </p>
                         <div class="collapse" id="collapseHojinBank">
                             <div class="card card-body">
-                                <div class="row">
+                                <div class="row align-middle">
                                     <div class="col-9">
-                                        <p>우리 1002-335-664040 김호진</p>
+                                        <h6>우리 1002-335-664040 김호진</h6>
                                     </div>
                                     <div class="col-3">
                                         <a class="btn buttono" href="https://qr.kakaopay.com/Ej9C6XNww" role="button"><img src="images/kakaopay_icon.png"></a>
@@ -495,9 +511,9 @@
                         </p>
                         <div class="collapse" id="collapseYejiBank">
                             <div class="card card-body">
-                                <div class="row">
+                                <div class="row align-middle">
                                     <div class="col-9">
-                                        <p>우리 1002-929-479972 이예지</p>
+                                        <h6>우리 1002-335-664040 김호진</h6>
                                     </div>
                                     <div class="col-3">
                                         <a class="btn buttono" href="https://qr.kakaopay.com/Ej884WyH9" role="button"><img src="images/kakaopay_icon.png"></a>
@@ -578,6 +594,7 @@
         <script src="js/jquery.easing.1.3.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="js/jquery.flexslider-min.js"></script>
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/sticky-kit.min.js"></script>
         <script src="js/isotope.js"></script>
@@ -588,21 +605,21 @@
         
         <!-- Vegas Background Slideshow (vegas.slider kenburns) -->
         <script>
-            $(document).ready(function() {
-                $('#home').vegas({
-                    slides: [{
-                        src: "images/slider.jpg"
-                    }, {
-                        src: "images/slider2.jpg"
-                    }],
-                    overlay: true,
-                    transition: 'fade2',
-                    animation: 'kenburnsDownLeft',
-                    transitionDuration: 1000,
-                    delay: 10000,
-                    animationDuration: 10000
-                });
-            });
+            // $(document).ready(function() {
+            //     $('#home').vegas({
+            //         slides: [{
+            //             src: "images/slider.jpg"
+            //         }, {
+            //             src: "images/slider2.jpg"
+            //         }],
+            //         overlay: true,
+            //         transition: 'fade2',
+            //         animation: 'kenburnsDownLeft',
+            //         transitionDuration: 1000,
+            //         delay: 10000,
+            //         animationDuration: 10000
+            //     });
+            // });
 
             const urlParams = new URLSearchParams(window.location.search);
             const inviHost = urlParams.get('host');
