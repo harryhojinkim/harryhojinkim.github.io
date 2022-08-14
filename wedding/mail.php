@@ -7,7 +7,7 @@
         
         # Sender Data
         $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
-        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        // $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $phone = trim($_POST["phone"]);
         $message = trim($_POST["message"]);
         
@@ -19,9 +19,11 @@
             exit;
         }
         
+        $subject = "RSVP added = Name:";
+        $subject .= $name
         # Mail Content
         $content = "Name: $name\n";
-        $content .= "Email: $email\n\n";
+        // $content .= "Email: $email\n\n";
         $content .= "Phone: $phone\n";
         $content .= "Message:\n$message\n";
 
@@ -29,7 +31,7 @@
         $headers = "From: $name <$email>";
 
         # Send the email.
-        $success = mail($mail_to, $content, $headers);
+        $success = mail($mail_to, $subject, $content);
         if ($success) {
             # Set a 200 (okay) response code.
             http_response_code(200);
