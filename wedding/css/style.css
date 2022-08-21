@@ -2128,6 +2128,7 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 /* =====  Button style  ===== */
 .btn-map {
     font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 0;
 }
 
 .btn-map .btn-subtitle {
@@ -2137,6 +2138,7 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 .btn-bank {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 16px;
+    letter-spacing: 0;
     word-break: keep-all;
 }
 
