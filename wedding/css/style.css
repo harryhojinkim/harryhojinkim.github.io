@@ -31,7 +31,7 @@
 
 /* ===== Google Fonts ===== */
 
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Noto+Serif+KR:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Noto+Serif+KR:wght@200;300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 /* ===== Default style ===== */
 
@@ -493,6 +493,15 @@ input[type=radio]:checked:before {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.valign-start {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: flex-start;
 }
 
 .bg-pink {
@@ -993,24 +1002,39 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 .header .caption .o-hidden {
     display: inline-block;
 }
+.header .row{
+    min-height: 50vh;
+}
 .header .caption h5 {
-   font-family: 'Nunito Sans', sans-serif;
-    font-size: 20px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 30px;
     font-weight: 400;
-    letter-spacing: 5px;
-    margin-bottom: 0;
+    /* letter-spacing: 5px; */
+    margin-bottom: 30px;
     color: #fff;
     text-transform: uppercase;
 }
+.header .caption h6 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: #FFF;
+    /* letter-spacing: 5px; */
+    margin-top: 30px;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
 .header .caption h1 {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'Cormorant Garamond', 'Nanum Myeongjo', serif;
+    /* font-family: 'Alex Brush', cursive; */
     font-weight: 400;
     margin: 0 0 15px 0;
     font-size: 120px;
     color: #FFF;
     display: block;
     line-height: 1em;
-    position: relative;
+    /* position: relative; */
 }
 .header .caption p {
     color: #fff;
@@ -1020,10 +1044,13 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
         background-position: center center;
     }
     .header .caption h1 {
-        font-size: 40px;
+        font-size: 50px;
     }
     .header .caption h5 {
-        font-size: 12px;
+        font-size: 20px;
+    }
+    .header .caption h6 {
+        font-size: 11px;
     }
 }
 /* bounce */
@@ -1308,17 +1335,25 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 /* ===== Title style ===== */
 
 .hojinyeji-title {
-    color: #000;
-    font-family: 'Cormorant Garamond', 'Noto Serif KR', serif;
+    color: black;
+    font-family: 'Cormorant Garamond', 'Nanum Myeongjo', serif;
     margin-bottom: 0px;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+
 }
 
 .hojinyeji-title span {
     display: block;
+}
+
+@media all and (max-width: 991px) {
+    .hojinyeji-title {
+        font-size: 32px;
+    }
 }
 
 .hojinyeji-story-title {
@@ -1487,26 +1522,27 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
-    color: #fff;
+    color: black;
     margin-bottom: 0;
 }
 
 #countdown .section-head h4 {
     position: relative;
-    color: #fff;
-    font-family: 'Alex Brush', cursive;
+    color: black;
+    /* font-family: 'Alex Brush', cursive; */
+    font-family: 'Cormorant Garamond', 'Nanum Myeongjo', serif;
     font-weight: 400;
-    font-size: 60px;
-    margin-bottom: 0;
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 #countdown .section-head h3,h5 {
-    color: #FFF;
+    color: black;
     margin-bottom: 0;
 }
 
 #countdown .section-head p {
-    color: #FFF;
+    color: black;
     font-size: 24px;
     margin-bottom: 0;
 }
@@ -1517,35 +1553,40 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 }
 
 #countdown li {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
     font-weight: 400;
     display: inline-block;
     font-size: 15px;
     list-style-type: none;
     padding: 15px;
-    color: #fff;
+    color: black;
     line-height: 3em;
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 #countdown li span {
     display: block;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
     font-size: 60px;
     font-weight: 700;
-    color: #fff;
+    color: black;
     letter-spacing: -1px;
 }
 
 @media all and (max-width: 768px) {
     #countdown li {
         font-size: 12px;
-        padding: 15px;
+        padding: 10px;
     }
     #countdown li span {
-        font-size: 60px;
+        font-size: 40px;
+    }
+}
+
+@media all and (max-width: 991px) {
+    #countdown .section-head h4 {
+        font-size: 32px;
     }
 }
 
@@ -1602,6 +1643,28 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
     top: 15px;
     right: 45px;
     z-index: 3;
+}
+
+.story h5 {
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.5;
+}
+
+.story h6 {
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 1.5;
+}
+
+.story p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 18px;
+    color: black;
+}
+
+@media all and (max-width: 991px) {
+    #story p {
+        font-size: 16px;
+    }
 }
 
 
@@ -1785,7 +1848,7 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 }
 
 
-/* ======= See You style ======= */
+/* ======= bank style ======= */
 
 .seeyou .section-head span {
     color: #fff;
@@ -1812,6 +1875,13 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
     font-weight: 400;
     font-size: 60px;
     margin-bottom: 0;
+}
+
+.seeyou p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
 }
 
 
@@ -1939,10 +2009,17 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 }
 
 .whenwhere .item .content h5 {
-    font-size: 21px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 18px;
     margin-top: 10px;
     margin-bottom: 15px;
     text-transform: uppercase;
+}
+
+.whenwhere .item .content p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+    color: #9e9e9e;
 }
 
 .whenwhere .item .content p i {
@@ -2049,9 +2126,20 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 
 
 /* =====  Button style  ===== */
-.btn {
-    padding: 0;
+.btn-map {
+    font-family: 'Nanum Myeongjo', serif;
 }
+
+.btn-map .btn-subtitle {
+    font-size: 70%;
+}
+
+.btn-bank {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+    word-break: keep-all;
+}
+
 .buttono {
     position: relative;
     line-height: 1em;
@@ -2581,10 +2669,6 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
     .hojinyeji-couple-subtitle {
         font-size: 18px;
     }
-    #countdown .section-head h4 {
-        font-size: 32px;
-        line-height: 1em;
-    }
     .seeyou .section-head h4 {
         font-size: 32px;
         margin-bottom: 5px;
@@ -2598,6 +2682,8 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
         margin: 0 15px;
     }
 }
+
+
 
 
 @media (max-width: 992px) {
