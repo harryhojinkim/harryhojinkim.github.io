@@ -24,6 +24,9 @@
     <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
     <![endif]-->
+    <script>
+        Kakao.init('027d4c072fd84be92d1447aa0f1dd745');
+    </script>
 </head>
 
 <body>
@@ -166,7 +169,7 @@
                                     <h5><i class="ti-location-pin"></i> 서울 서초구 신반포로 176</h5>
                                     <p>호텔, 신세계 백화점 주차장 6시간 무료 주차 가능<br>고속터미널역 3,7,9호선 3번 출구</p>
                                     <div class="row justify-content-center">
-                                        <div class="col-10 col-md-4 text-center">
+                                        <div class="col-10 col-md-6 text-center">
                                             <button class="btn btn-secondary btn-map btn-lg" onclick="kakaoNavi();">장소 검색하기<br><span class="btn-subtitle">카카오 네비로 이동합니다.</span></button>
                                         </div>
                                     </div>
@@ -628,8 +631,8 @@
             function kakaoNavi() {
                 Kakao.Navi.start({
                     name:'JW 메리어트 호텔 서울',
-                    X: 127.0047481,
-                    Y: 37.5039018,
+                    x: 127.0047481,
+                    y: 37.5039018,
                 })
             }
 
