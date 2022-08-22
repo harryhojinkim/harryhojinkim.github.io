@@ -1658,7 +1658,9 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 .story p {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 18px;
+    line-height: 2;
     color: black;
+    word-break: keep-all;
 }
 
 @media all and (max-width: 991px) {
@@ -2091,6 +2093,28 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
     transform: scale(1.1);
 }
 
+/* RSVP */
+.rsvp p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 18px;
+    color: black;
+}
+
+.rsvp input {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.rsvp label {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+
+@media all and (max-width: 991px) {
+    #rsvp p {
+        font-size: 16px;
+    }
+}
+
 
 /* =====  Gift Registry style  ===== */
 
@@ -2128,6 +2152,9 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 /* =====  Button style  ===== */
 .btn-map {
     font-family: 'Nanum Myeongjo', serif;
+    background-color: #BD945A;
+    border-color: #BD945A;
+    color: white;
     letter-spacing: 0;
 }
 
@@ -2138,6 +2165,19 @@ body.custom_offcanvas .hojinyeji-nav-toggle {
 .btn-bank {
     font-family: 'Nanum Myeongjo', serif;
     font-size: 16px;
+    background-color: #BD945A;
+    border-color: #BD945A;
+    color: white;
+    letter-spacing: 0;
+    word-break: keep-all;
+}
+
+.btn-rsvp {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+    background-color: #BD945A;
+    border-color: #BD945A;
+    color: white;
     letter-spacing: 0;
     word-break: keep-all;
 }
