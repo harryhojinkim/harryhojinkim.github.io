@@ -38,12 +38,14 @@
         </div>
     </div>
     <!-- Main -->
-    <div id="hojinyeji-page"> <a href="#" class="js-hojinyeji-nav-toggle hojinyeji-nav-toggle"><i></i></a>
+    <div id="hojinyeji-page"> <a href="#" id="hojinyeji-nav-toggle" class="js-hojinyeji-nav-toggle hojinyeji-nav-toggle"><i></i></a>
         <!-- Sidebar Section -->
         <aside id="hojinyeji-aside">
             <!-- Logo -->
             <div class="hojinyeji-logo">
-                <a href="wedding.html"> <img src="images/logo.png" alt=""> <span>Hojin <small>&</small> Yeji</span>
+                <a href="wedding.html">
+                    <!-- <img src="images/logo.png" alt=""> -->
+                    <span>Hojin <small>&</small> Yeji</span>
                     <h6>09.25.2022</h6>
                 </a>
             </div>
@@ -532,11 +534,12 @@
                 <div class="hojinyeji-narrow-content">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <h2>
+                            <!-- <h2>
                                 <a href="wedding.html"><img src="images/logo.png" alt=""><span>Hojin <small>&</small> Yeji</span></a>
                             </h2>
                             <p> </p>
-                            <p class="copyright">September 15, 202 <br> Grand Ballroom, JW Marriott Seoul</p>
+                            <p class="copyright">September 15, 202 <br> Grand Ballroom, JW Marriott Seoul</p> -->
+                            <p class="copyright">본 모바일 청첩장은 신부의 부탁을 받고, 신랑이 직접 개발하였습니다.</p>
                         </div>
                     </div>
                 </div>
@@ -579,7 +582,18 @@
             const spreadsheetId = "1YzU0sGxdS4uFOfIuWYnUC4aO0778aMcsGjygMU3X8uY"
             const urlParams = new URLSearchParams(window.location.search);
             const inviHost = urlParams.get('host');
-            console.log(inviHost)
+            console.log(inviHost);
+
+            $(document).scroll(function() {
+                var y = $(this).scrollTop();
+                var navToggle = document.getElementById('hojinyeji-nav-toggle');
+                if(y > 844){
+                    $('.hojinyeji-nav-toggle').fadeIn();
+                } else {
+                    $('.hojinyeji-nav-toggle').fadeOut();
+                }
+            });
+
 
             var venue = new kakao.maps.LatLng(37.5039018, 127.0047481);
             var map = new kakao.maps.Map(document.getElementById('map'), {

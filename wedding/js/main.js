@@ -133,6 +133,7 @@
         mobileMenuOutsideClick();
         sliderMain();
     });
+    
     // Sections background image from data background
     var pageSection = $(".bg-img, section");
     pageSection.each(function (indx) {
