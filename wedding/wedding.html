@@ -563,21 +563,9 @@
         
         <!-- Vegas Background Slideshow (vegas.slider kenburns) -->
         <script>
-            // $(document).ready(function() {
-            //     $('#home').vegas({
-            //         slides: [{
-            //             src: "images/slider.jpg"
-            //         }, {
-            //             src: "images/slider2.jpg"
-            //         }],
-            //         overlay: true,
-            //         transition: 'fade2',
-            //         animation: 'kenburnsDownLeft',
-            //         transitionDuration: 1000,
-            //         delay: 10000,
-            //         animationDuration: 10000
-            //     });
-            // });
+            $(document).ready(function() {
+                $('.hojinyeji-nav-toggle').hide();
+            });
             
             const spreadsheetId = "1YzU0sGxdS4uFOfIuWYnUC4aO0778aMcsGjygMU3X8uY"
             const urlParams = new URLSearchParams(window.location.search);
@@ -586,8 +574,9 @@
 
             $(document).scroll(function() {
                 var y = $(this).scrollTop();
+                const max_width = $(window).width();
                 var navToggle = document.getElementById('hojinyeji-nav-toggle');
-                if(y > 844){
+                if(max_width <= 768 && y > 844 ){
                     $('.hojinyeji-nav-toggle').fadeIn();
                 } else {
                     $('.hojinyeji-nav-toggle').fadeOut();
